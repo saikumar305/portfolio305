@@ -52,7 +52,7 @@ const Hero = ({ slice }: HeroProps): JSX.Element => {
         },
         {
           y: 0,
-          duration: 1,
+          duration: 0.5,
           scale: 1,
           opacity: 1,
           ease: "elastic.out(1,0.3)",

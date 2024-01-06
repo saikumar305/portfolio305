@@ -114,8 +114,8 @@ function Geometry({ r, position, geometry, materials }) {
         x: 0,
         y: 0,
         z: 0,
-        duration: 1,
-        ease: "elastic.out(1,0.3)",
+        duration: 0.8,
+        ease: "linear",
         delay: 0.1,
       });
     });

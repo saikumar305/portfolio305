@@ -1,0 +1,34 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"heading": {
+				"__TYPE__": "FieldContent",
+				"value": "cry",
+				"type": "Text"
+			},
+			"email": {
+				"__TYPE__": "FieldContent",
+				"value": "coach",
+				"type": "Text"
+			},
+			"message": {
+				"__TYPE__": "FieldContent",
+				"value": "perhaps",
+				"type": "Text"
+			},
+			"contact_button": {
+				"__TYPE__": "FieldContent",
+				"value": "against",
+				"type": "Text"
+			},
+			"address": {
+				"__TYPE__": "FieldContent",
+				"value": "material",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

@@ -17,6 +17,12 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
+            "resume": {
+              "type": "SharedSlice"
+            },
+            "text_block": {
+              "type": "SharedSlice"
+            },
             "contact": {
               "type": "SharedSlice"
             },

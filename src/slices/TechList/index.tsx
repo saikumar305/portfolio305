@@ -79,7 +79,7 @@ const TechList = ({ slice }: TechListProps): JSX.Element => {
                 style={{
                   color: index % 3 === 0 && tech_color ? tech_color : "inherit",
                 }}
-                className="tech-item text-8xl font-extrabold uppercase tracking-tighter hover:text-yellow-300"
+                className="tech-item text-[clamp(2rem,6rem,6rem)] font-extrabold uppercase tracking-tighter hover:text-yellow-300"
               >
                 {tech_name}
               </span>

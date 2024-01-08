@@ -2,7 +2,19 @@
 	{
 		"__TYPE__": "SharedSliceContent",
 		"variation": "default",
-		"primary": {},
+		"primary": {
+			"text": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Do proident aliqua cillum officia incididunt ea. Labore veniam voluptate irure fugiat nulla. Ut sunt excepteur irure ipsum amet minim consectetur laborum cupidatat velit Lorem tempor aute."
+						}
+					}
+				]
+			}
+		},
 		"items": []
 	}
 ]

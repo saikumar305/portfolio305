@@ -1,0 +1,33 @@
+{
+  "id": "resume",
+  "type": "SharedSlice",
+  "name": "Resume",
+  "description": "Resume",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "heading": {
+          "type": "Text",
+          "config": {
+            "label": "Heading",
+            "placeholder": ""
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Button Text",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

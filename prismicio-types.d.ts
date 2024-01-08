@@ -168,6 +168,8 @@ export type HomepageDocument<Lang extends string = string> =
   >;
 
 type PageDocumentDataSlicesSlice =
+  | ResumeSlice
+  | TextBlockSlice
   | ContactSlice
   | ContentIndexSlice
   | ExperienceSlice
@@ -890,6 +892,58 @@ type HeroSliceVariation = HeroSliceDefault;
 export type HeroSlice = prismic.SharedSlice<"hero", HeroSliceVariation>;
 
 /**
+ * Primary content in *Resume → Primary*
+ */
+export interface ResumeSliceDefaultPrimary {
+  /**
+   * Heading field in *Resume → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resume.primary.heading
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Button Text field in *Resume → Primary*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: resume.primary.button_text
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Resume Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ResumeSliceDefault = prismic.SharedSliceVariation<
+  "default",
+  Simplify<ResumeSliceDefaultPrimary>,
+  never
+>;
+
+/**
+ * Slice variation for *Resume*
+ */
+type ResumeSliceVariation = ResumeSliceDefault;
+
+/**
+ * Resume Shared Slice
+ *
+ * - **API ID**: `resume`
+ * - **Description**: Resume
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ResumeSlice = prismic.SharedSlice<"resume", ResumeSliceVariation>;
+
+/**
  * Primary content in *TechList → Primary*
  */
 export interface TechListSliceDefaultPrimary {
@@ -960,6 +1014,21 @@ export type TechListSlice = prismic.SharedSlice<
 >;
 
 /**
+ * Primary content in *TextBlock → Primary*
+ */
+export interface TextBlockSliceDefaultPrimary {
+  /**
+   * Text field in *TextBlock → Primary*
+   *
+   * - **Field Type**: Rich Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: text_block.primary.text
+   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+   */
+  text: prismic.RichTextField;
+}
+
+/**
  * Default variation for TextBlock Slice
  *
  * - **API ID**: `default`
@@ -968,7 +1037,7 @@ export type TechListSlice = prismic.SharedSlice<
  */
 export type TextBlockSliceDefault = prismic.SharedSliceVariation<
   "default",
-  Record<string, never>,
+  Simplify<TextBlockSliceDefaultPrimary>,
   never
 >;
 
@@ -1036,12 +1105,17 @@ declare module "@prismicio/client" {
       HeroSliceDefaultPrimary,
       HeroSliceVariation,
       HeroSliceDefault,
+      ResumeSlice,
+      ResumeSliceDefaultPrimary,
+      ResumeSliceVariation,
+      ResumeSliceDefault,
       TechListSlice,
       TechListSliceDefaultPrimary,
       TechListSliceDefaultItem,
       TechListSliceVariation,
       TechListSliceDefault,
       TextBlockSlice,
+      TextBlockSliceDefaultPrimary,
       TextBlockSliceVariation,
       TextBlockSliceDefault,
     };

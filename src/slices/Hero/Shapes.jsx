@@ -62,9 +62,9 @@ function Geometries() {
   ];
 
   const soundEffects = [
-    new Audio("/sounds/hit2.ogg"),
-    new Audio("/sounds/hit3.ogg"),
-    new Audio("/sounds/hit4.ogg"),
+    new Audio("/kenney_impact-sounds/Audio/impactWood_medium_004.ogg"),
+    new Audio("/kenney_impact-sounds/Audio/impactPunch_heavy_002.ogg"),
+    new Audio("/kenney_impact-sounds/Audio/impactMetal_medium_004.ogg"),
   ];
 
   const materials = [
